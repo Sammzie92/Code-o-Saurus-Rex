@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background: #000942;
+    padding-left: 11%;
+    padding-right: 8%;
+    position: relative;
+    background-image: url(../images/photo.png);
+    background-size: 38%;
+    background-repeat: no-repeat;
+    background-position: 92% 100%;
+}
+.top-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0 15px;
+    border-bottom: 1px solid #bababa;
+}
+.top-nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.top-nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+.top-nav .btn{
+    background: #e91e63;
+    color: white;
+    border: 0;
+    outline: 0;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.top-nav .btn:hover{
+    scale: 1.08;
+
+}
+
+
+
+.dropdown-menu li {
+    display: flex;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu .menu-icon{
+    color: white;
+    height: 40px;
+    width: 20px;
+    list-style: none;
+    display: none;
+
+}
+#menu-bar{
+    display: none;
+}
+label[for='menu-bar']{
+    font-size: 1.3em;
+    color: #ffffff;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: none;
+
+}
+
+.side-nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+    background: linear-gradient(#4ca8ab, #430b8d, #1589c9, #1354e9,#6c10e5, #4ca8ab);
+    background-size: 100% 500%;
+    background-position: 0 40%;
+}
+.side-nav .logo{
+    margin-top: 1.2em;
+    margin-left: 30em;
+    cursor: pointer;
+
+}
+.side-nav a{
+    text-decoration: none;
+    color: white;
+    transform: rotate(-90deg) translateX(50%);
+    width: max-content;
+    font-size: 1.5em;
+}
+
+.side-nav:hover{
+    animation: backcolor 20s linear infinite;
+}
+@keyframes backcolor{
+    0%{
+        background-position: 0 1%;
+    }
+        100%{
+        background-position: 0 400%;
+    }
+}
+
+.text-area{
+    margin-top: 20%;
+    font-size: 19px;
+    color: white;
+    text-transform: uppercase;
+
+}
+.text-area h1{
+    line-height: 65px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 86px;
+    max-width: 550px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.text-area .icon{
+    background: #e91e63;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-area .icon img{
+    width: 15px;
+}
+
+/*Media queries for header*/
+/* Media Query for screen sizes below 600px */
+@media (max-width: 600px) {
+.header {
+    padding-left: 5%;
+    padding-right: 5%;
+        }
+.top-nav ul li {
+    display: none;
+  }
+.top-nav .btn {
+    display: none;
+
+  }
+.side-nav{
+    width:13%;
+}
+.text-area .icon {
+    margin-left: 60px;
+}
+.side-nav .logo{
+    width: 170px;
+    height: 170px;
+    margin-left: 250px;
+}
+
+.text-area h1 {
+        font-size: 35px;
+        line-height: 30px;
+        margin-top: 100px;
+        margin-bottom: 20px;
+        margin-left: 70px;
+  }
+
+.text-area p{
+        font-size: 35px;
+        line-height: 30px;
+        margin-top: 80px;
+        margin-bottom: 20px;
+        margin-left: 70px;
+}
+.menu-icon{
+    display: block;
+
+}
+
+    /* Style the drop-down menu items */
+    .dropdown-menu li {
+        display: block;
+        padding: 10px;
+        background-color: #333;
+    }
+
+    .dropdown-menu li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+
+}
+
+
+/* Media Query for screen sizes between 600px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  .header {
+    background-size: 20%;
+    background-position: 80% 100%;
+  }
+  .text-area {
+    margin-top: 10%;
+    font-size: 16px;
+  }
+  .text-area h1 {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Media Query for screen sizes above 900px */
+@media (min-width: 901px) {
+  .header {
+    background-size: 38%;
+    background-position: 92% 100%;
+  }
+  .text-area {
+    margin-top: 15%;
+  }
+  .text-area h1 {
+    font-size: 86px;
+    line-height: 65px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+/* End media Queries*/
